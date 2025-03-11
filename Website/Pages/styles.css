@@ -144,3 +144,22 @@ nav {
 .nav_btns {
   display: none;
 }
+
+@media (width > 768px) {
+  nav {
+    position: static;
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rems;
+  }
+
+  .nav_header{
+    flex: 1;
+    padding: 0;
+    background-color: #000;
+  }
+}
