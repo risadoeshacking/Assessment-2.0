@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 :root {
   --primary-color: #000;
   --primary-color-dark: #007bee;
@@ -14,13 +16,13 @@
   box-sizing: border-box;
 }
 
-.section_container{
+.section_container {
   max-width: var(--max-width);
-  margin:auto;
+  margin: auto;
   pad: 5rem 1rem;
 }
 
-.section_header{
+.section_header {
   margin-bottom: 5px;
   font-size: 2.5rem;
   font-weight: 700;
@@ -28,15 +30,15 @@
   text-align: center;
 }
 
-.section_description{
+.section_description {
   max-width: 600px;
   margin-inline: auto;
-  color:var(--text-dark);
+  color: var(--text-dark);
   text-align: center;
 }
 
-.btn{
-  padding: .75rem 1.5rem;
+.btn {
+  padding: 0.75rem 1.5rem;
   outline: none;
   border: none;
   font-size: 1rem;
@@ -52,25 +54,93 @@
   background-color: var(--primary-color);
 }
 
-.logo{
+.logo {
   font-size: 1.75rem;
   font-weight: 800;
   color: var(--text-dark);
 }
 
-img{
+img {
   display: flex;
   width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
   transition: 0.3s;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
 html,
-body{}
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav_header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.nav_logo .logo {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.nav_menu_btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav_links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--primary-color);
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.nav_links.open {
+  transform: translateY(100%);
+}
+
+.nav_links a{
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.nav_links a:hover {
+  color: var(--text-dark);
+}
+
+.nav_btns {
+  display: none;
+}
