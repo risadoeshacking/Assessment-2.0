@@ -13,3 +13,8 @@ menuBtn.addEventListener("click", () => {
     menuBtnIcon.classList.add("ri-menu-line");
   }
 });
+
+navLinks.addEventListener("click", (e) => {
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
+});
