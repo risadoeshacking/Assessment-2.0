@@ -3,9 +3,9 @@
 :root {
   --primary-color: #000;
   --primary-color-dark: #007bee;
-  --text-dark: #fff;
-  --text-light: #fff;
-  --extra-light: #fff;
+  --text-dark: #000000;
+  --text-light: #8a8a8a;
+  --extra-light: #bdbdbd;
   --white: #fff;
   --max-width: 1200px;
 }
@@ -162,4 +162,31 @@ nav {
     padding: 0;
     background-color: #000;
   }
+
+
+.nav_logo .logo {
+   color: var(--text-dark);
+}
+
+.nav_menu_btn {
+  display: none;
+}
+
+.nav_links{
+  position: static;
+  width: fit-content;
+  padding: 0;
+  flex-direction: row;
+  background-color: transparent;
+  transform: none !important; 
+}
+
+.nav_links a {
+  color: var(--text-dark);
+}
+
+.nav_links a:hover {
+  color: var(--primary-color);
+}
+
 }
