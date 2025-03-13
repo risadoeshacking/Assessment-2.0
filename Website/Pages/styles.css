@@ -4,8 +4,8 @@
   --primary-color: #000;
   --primary-color-dark: #007bee;
   --text-dark: #000000;
-  --text-light: #8a8a8a;
-  --extra-light: #bdbdbd;
+  --text-light: #fff;
+  --extra-light: #fff;
   --white: #fff;
   --max-width: 1200px;
 }
@@ -131,7 +131,7 @@ nav {
   transform: translateY(100%);
 }
 
-.nav_links a{
+.nav_links a {
   font-weight: 600;
   color: var(--white);
   white-space: nowrap;
@@ -143,6 +143,38 @@ nav {
 
 .nav_btns {
   display: none;
+}
+
+header{
+  margin-top: 5rem;
+  padding-inline: 1rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+header::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: calc(100% - 2rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(Banner/Background.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3rek;
+  z-index: -1;
+}
+
+header_container{
+  display: grid;
+}
+
+.header_content{
+  padding: 4rem 1rem;
 }
 
 @media (width > 768px) {
@@ -157,36 +189,44 @@ nav {
     gap: 2rems;
   }
 
-  .nav_header{
+  .nav_header {
     flex: 1;
     padding: 0;
-    background-color: #000;
+    background-color: #ffffff;
   }
 
+  .nav_logo .logo {
+    color: var(--text-dark);
+  }
 
-.nav_logo .logo {
-   color: var(--text-dark);
-}
+  .nav_menu_btn {
+    position: static;
+    width: fit-content;
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none !important;
+  }
 
-.nav_menu_btn {
-  display: none;
-}
+  .nav_links a {
+    color: var(--text-light);
+  }
 
-.nav_links{
-  position: static;
-  width: fit-content;
-  padding: 0;
-  flex-direction: row;
-  background-color: transparent;
-  transform: none !important; 
-}
+  .nav_links a:hover {
+    color: var(--primary-color);
+  }
+  .nav_links li:last-child{
+    display: none;
+  }
 
-.nav_links a {
-  color: var(--text-dark);
-}
+  .nav_btns{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 
-.nav_links a:hover {
-  color: var(--primary-color);
-}
-
+  .nav_btns .btn{
+    padding: 0.75rem 2rem;
+    background-color: #000000fa;
+  }
 }
