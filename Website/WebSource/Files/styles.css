@@ -169,7 +169,7 @@ header::before{
   z-index: -1;
 }
 
-header_container{
+.header_container{
   display: grid;
 }
 
@@ -192,6 +192,23 @@ header_container{
   color: var(--text-dark);
   line-height: 5.5rem;
   text-align: center;
+}
+
+.header_btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header_btns .btns{
+  padding: 1rem 2rem;
+}
+
+.header_btns a{
+  padding: 9px 13px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
 @media (width > 768px) {
