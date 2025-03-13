@@ -209,6 +209,13 @@ header::before{
   padding: 9px 13px;
   font-size: 1.5rem;
   color: var(--primary-color);
+  background-color: var(--white);
+  border-radius: 100%;
+}
+
+.header_btns a:hover{
+  color: var(--white);
+  background-color: var(--primary-color);
 }
 
 @media (width > 768px) {
