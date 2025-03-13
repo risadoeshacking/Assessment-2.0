@@ -266,8 +266,47 @@ header::before{
     justify-content: flex-end;
   }
 
-  .nav_btns .btn{
+  .nav_btns button{
     padding: 0.75rem 2rem;
     background-color: #000000fa;
+  }
+
+  header{
+    margin-top: 0;
+  }
+
+  .header_container{
+    grid-template-columns: 
+      minimax(0, 1fr)
+      repeat(5, minimax(0, calc(var(--max-width) / 5)))
+      minimax(0, 1fr);
+  }
+
+  .header_content {
+    grid-column: 2/4;
+    padding-block: 8rem;
+  }
+
+  .header_content :is(p, h1) {
+    text-align: left;
+  }
+
+  .header_btns{
+    justify-content: flex-start;
+  }
+
+  .header_image{
+    grid-column: 4/8;
+    position: relative;
+    isolation: isolate;
+    height: 100%;
+  }
+
+  .header_image img{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    height: 100%;
+    width: unset;
   }
 }
