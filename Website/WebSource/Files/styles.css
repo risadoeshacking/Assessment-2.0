@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 :root {
-  --primary-color: #000;
-  --primary-color-dark: #007bee;
-  --text-dark: #000000;
-  --text-light: #fff;
-  --extra-light: #fff;
-  --white: #fff;
+  --primary-color: #000000;
+  --primary-color-dark: #2476da;
+  --text-dark: #0a0a0a;
+  --text-light: #737373;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
   --max-width: 1200px;
 }
 
@@ -16,13 +16,13 @@
   box-sizing: border-box;
 }
 
-.section_container {
+.section__container {
   max-width: var(--max-width);
   margin: auto;
-  pad: 5rem 1rem;
+  padding: 5rem 1rem;
 }
 
-.section_header {
+.section__header {
   margin-bottom: 5px;
   font-size: 2.5rem;
   font-weight: 700;
@@ -30,10 +30,10 @@
   text-align: center;
 }
 
-.section_description {
+.section__description {
   max-width: 600px;
   margin-inline: auto;
-  color: var(--text-dark);
+  color: var(--text-light);
   text-align: center;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .btn:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-dark);
 }
 
 .logo {
@@ -91,7 +91,7 @@ nav {
   z-index: 9;
 }
 
-.nav_header {
+.nav__header {
   padding: 1rem;
   width: 100%;
   display: flex;
@@ -100,23 +100,23 @@ nav {
   background-color: var(--primary-color);
 }
 
-.nav_logo .logo {
+.nav__logo .logo {
   font-size: 1.5rem;
   color: var(--white);
 }
 
-.nav_menu_btn {
+.nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
 }
 
-.nav_links {
+.nav__links {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,25 +127,25 @@ nav {
   z-index: -1;
 }
 
-.nav_links.open {
+.nav__links.open {
   transform: translateY(100%);
 }
 
-.nav_links a {
+.nav__links a {
   font-weight: 600;
   color: var(--white);
   white-space: nowrap;
 }
 
-.nav_links a:hover {
+.nav__links a:hover {
   color: var(--text-dark);
 }
 
-.nav_btns {
+.nav__btns {
   display: none;
 }
 
-header{
+header {
   margin-top: 5rem;
   padding-inline: 1rem;
   position: relative;
@@ -153,59 +153,59 @@ header{
   overflow: hidden;
 }
 
-header::before{
+header::before {
   position: absolute;
   content: "";
-  height: 100%;
+  height: 85%;
   width: calc(100% - 2rem);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(Banner/Background.png);
-  background-position: center center;
+  background-image: url("Banner/Background.png");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 3rek;
+  border-radius: 3rem;
   z-index: -1;
 }
 
-.header_container{
+.header__container {
   display: grid;
 }
 
-.header_content{
+.header__content {
   padding: 4rem 1rem;
 }
 
-.header_content p{
+.header__content p {
   margin-bottom: 5px;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #000000;
   text-align: center;
 }
 
-.header_content h1{
+.header__content h1 {
   margin-bottom: 2rem;
   font-size: 4.5rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #000000;
   line-height: 5.5rem;
   text-align: center;
 }
 
-.header_btns{
+.header__btns {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 
-.header_btns .btns{
+.header__btns .btn {
   padding: 1rem 2rem;
 }
 
-.header_btns a{
+.header__btns a {
   padding: 9px 13px;
   font-size: 1.5rem;
   color: var(--primary-color);
@@ -213,12 +213,12 @@ header::before{
   border-radius: 100%;
 }
 
-.header_btns a:hover{
+.header__btns a:hover {
   color: var(--white);
   background-color: var(--primary-color);
 }
 
-@media (width > 768px) {
+@media (min-width: 768px) {
   nav {
     position: static;
     padding: 2rem 1rem;
@@ -227,20 +227,24 @@ header::before{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rems;
+    gap: 2rem;
   }
 
-  .nav_header {
+  .nav__header {
     flex: 1;
     padding: 0;
-    background-color: #ffffff;
+    background-color: transparent;
   }
 
-  .nav_logo .logo {
+  .nav__logo .logo {
     color: var(--text-dark);
   }
 
-  .nav_menu_btn {
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
     position: static;
     width: fit-content;
     padding: 0;
@@ -249,60 +253,61 @@ header::before{
     transform: none !important;
   }
 
-  .nav_links a {
-    color: var(--text-light);
+  .nav__links a {
+    color: var(--text-dark);
   }
 
-  .nav_links a:hover {
+  .nav__links a:hover {
     color: var(--primary-color);
   }
-  .nav_links li:last-child{
+
+  .nav__links li:last-child {
     display: none;
   }
 
-  .nav_btns{
+  .nav__btns {
     flex: 1;
     display: flex;
     justify-content: flex-end;
   }
 
-  .nav_btns button{
+  .nav__btns button {
     padding: 0.75rem 2rem;
-    background-color: #000000fa;
+    background-color: var(--text-dark);
   }
 
-  header{
+  header {
     margin-top: 0;
   }
 
-  .header_container{
-    grid-template-columns: 
-      minimax(0, 1fr)
-      repeat(5, minimax(0, calc(var(--max-width) / 5)))
-      minimax(0, 1fr);
+  .header__container {
+    grid-template-columns:
+      minmax(0, 1fr)
+      repeat(5, minmax(0, calc(var(--max-width) / 5)))
+      minmax(0, 1fr);
   }
 
-  .header_content {
+  .header__content {
     grid-column: 2/4;
     padding-block: 8rem;
   }
 
-  .header_content :is(p, h1) {
+  .header__content :is(p, h1) {
     text-align: left;
   }
 
-  .header_btns{
+  .header__btns {
     justify-content: flex-start;
   }
 
-  .header_image{
+  .header__image {
     grid-column: 4/8;
     position: relative;
     isolation: isolate;
     height: 100%;
   }
 
-  .header_image img{
+  .header__image img {
     position: absolute;
     top: 2rem;
     left: 0;
