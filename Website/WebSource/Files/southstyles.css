@@ -366,8 +366,7 @@ header::before {
   margin-top: 2rem;
   padding: 1.5rem;
   font-weight: 600;
-  color: var(--text-dark);
-  background-image: url("Banner/Background.png");
+  color: #ffffff;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
