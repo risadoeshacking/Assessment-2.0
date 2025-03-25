@@ -337,6 +337,12 @@ header::before {
   color: var(--extra-light);
 }
 
+.header_auckland{
+  text-align: center;
+  font-size: 25px;
+  padding-top: 20px;
+}
+
 .showcase__container {
   display: grid;
   gap: 2rem;
