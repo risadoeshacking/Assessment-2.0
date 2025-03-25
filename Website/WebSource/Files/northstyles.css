@@ -325,7 +325,11 @@ header::before {
   border: 2px solid var(--white);
   border-radius: 100%;
 }
-
+.header_auckland{
+  text-align: center;
+  font-size: 25px;
+  
+}
 .journey__card__content h4 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
