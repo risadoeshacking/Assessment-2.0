@@ -29,6 +29,12 @@
   color: var(--text-dark);
   text-align: center;
 }
+.section__description {
+  max-width: 600px;
+  margin-inline: auto;
+  color: var(--text-light);
+  text-align: center;
+}
 
 .btn {
   padding: 0.75rem 1.5rem;
@@ -270,10 +276,9 @@ header::before {
   border: 2px solid var(--white);
   border-radius: 100%;
 }
-.header_auckland{
+.header_auckland {
   text-align: center;
   font-size: 25px;
-  
 }
 .journey__card__content h4 {
   margin-bottom: 1rem;
@@ -309,7 +314,6 @@ header::before {
   margin-bottom: 1rem;
   color: var(--text-light);
 }
-
 
 .discover__grid {
   margin-top: 4rem;
@@ -350,7 +354,6 @@ header::before {
 .destination__card p {
   color: var(--text-light);
 }
-
 
 footer {
   background-color: var(--extra-light);
